@@ -1,15 +1,14 @@
 import torch
 import torch.nn as nn
+import torch.nn.functional as F
 from mmcv.cnn import ConvModule, NonLocal2d
 
 from mmseg.ops import resize
 from ..builder import HEADS
 from .decode_head import BaseDecodeHead
-from .psp_head import PPM
 
 from einops import rearrange
 from timm.models.layers import DropPath, to_2tuple, trunc_normal_
-import torch.nn.functional as F
 
 class MLP(nn.Module):
     """
