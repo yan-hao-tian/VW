@@ -172,12 +172,12 @@ class LawinHead(BaseDecodeHead):
             norm_cfg=dict(type='SyncBN', requires_grad=True)
         )
          
-        self.ds_8 = PatchEmbed(proj_type='conv', patch_size=8, in_chans=512, embed_dim=512, norm_layer=nn.LayerNorm)
-        self.ds_4 = PatchEmbed(proj_type='conv', patch_size=4, in_chans=512, embed_dim=512, norm_layer=nn.LayerNorm)
-        self.ds_2 = PatchEmbed(proj_type='conv', patch_size=2, in_chans=512, embed_dim=512, norm_layer=nn.LayerNorm)
-#         self.ds_8 = PatchEmbed(proj_type='pool', patch_size=8, in_chans=512, embed_dim=512, norm_layer=None)
-#         self.ds_4 = PatchEmbed(proj_type='pool', patch_size=4, in_chans=512, embed_dim=512, norm_layer=None)
-#         self.ds_2 = PatchEmbed(proj_type='pool', patch_size=2, in_chans=512, embed_dim=512, norm_layer=None)
+#         self.ds_8 = PatchEmbed(proj_type='conv', patch_size=8, in_chans=512, embed_dim=512, norm_layer=nn.LayerNorm)
+#         self.ds_4 = PatchEmbed(proj_type='conv', patch_size=4, in_chans=512, embed_dim=512, norm_layer=nn.LayerNorm)
+#         self.ds_2 = PatchEmbed(proj_type='conv', patch_size=2, in_chans=512, embed_dim=512, norm_layer=nn.LayerNorm)
+        self.ds_8 = PatchEmbed(proj_type='pool', patch_size=8, in_chans=512, embed_dim=512, norm_layer=None)
+        self.ds_4 = PatchEmbed(proj_type='pool', patch_size=4, in_chans=512, embed_dim=512, norm_layer=None)
+        self.ds_2 = PatchEmbed(proj_type='pool', patch_size=2, in_chans=512, embed_dim=512, norm_layer=None)
 
     def get_context(self, x, patch_size):
         n, _, h, w = x.shape
