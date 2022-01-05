@@ -138,7 +138,7 @@ class LawinAttn(NonLocal2d):
 
 @HEADS.register_module()
 class LawinHead(BaseDecodeHead):
-    def __init__(self, embed_dim=2048, use_scale=False, reduction=2, **kwargs):
+    def __init__(self, embed_dim=768, use_scale=True, reduction=2, **kwargs):
         super(LawinHead, self).__init__(
             input_transform='multiple_select', **kwargs)
         self.lawin_8 = LawinAttn(in_channels=512, reduction=reduction ,use_scale=use_scale, conv_cfg=self.conv_cfg, norm_cfg=self.norm_cfg, mode='embedded_gaussian', head=64, patch_size=8)
