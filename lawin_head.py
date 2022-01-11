@@ -157,7 +157,14 @@ class LawinHead(BaseDecodeHead):
             kernel_size=1,
             norm_cfg=dict(type='SyncBN', requires_grad=True)
         )
-
+        
+        self.short_path = ConvModule(
+            in_channels=embed_dim*3,
+            out_channels=512,
+            kernel_size=1,
+            norm_cfg=dict(type='SyncBN', requires_grad=True)
+        )
+        
         self.cat = ConvModule(
             in_channels=512*5,
             out_channels=512,
@@ -215,7 +222,7 @@ class LawinHead(BaseDecodeHead):
         query = rearrange(query, 'b (c ph pw) (nh nw) -> (b nh nw) c ph pw', ph=patch_size, pw=patch_size, nh=h//patch_size, nw=w//patch_size)
 
         output = []
-        output.append(_c)
+        output.append(self.short_path(torch.cat([_c4, _c3, _c2], dim=1)))
         output.append(resize(self.image_pool(_c),
                         size=(h, w),
                         mode='bilinear',
