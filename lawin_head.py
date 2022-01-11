@@ -12,7 +12,7 @@ from timm.models.layers import DropPath, to_2tuple, trunc_normal_
 
 class MLP(nn.Module):
     """
-    Linear Embedding: Copy from SegFormer
+    Linear Embedding: github.com/NVlabs/SegFormer
     """
     def __init__(self, input_dim=2048, embed_dim=768):
         super().__init__()
@@ -26,7 +26,7 @@ class MLP(nn.Module):
 
 class PatchEmbed(nn.Module):
     """
-    Patch Embedding: Copy from Swin Transformer
+    Patch Embedding: github.com/SwinTransformer/
     """
     def __init__(self, proj_type='pool', patch_size=4, in_chans=3, embed_dim=96, norm_layer=None):
         super().__init__()
