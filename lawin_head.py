@@ -223,7 +223,7 @@ class LawinHead(BaseDecodeHead):
 
         output = []
         output.append(self.short_path(torch.cat([_c4, _c3, _c2], dim=1)))
-        output.append(resize(self.image_pool(torch.cat([_c4, _c3, _c2], dim=1)),
+        output.append(resize(self.image_pool(_c),
                         size=(h, w),
                         mode='bilinear',
                         align_corners=self.align_corners))
