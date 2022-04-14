@@ -37,7 +37,7 @@ class PatchEmbed(nn.Module):
         self.embed_dim = embed_dim
 
         if proj_type == 'conv':
-            self.proj = nn.Conv2d(in_chans, embed_dim, kernel_size=patch_size, stride=patch_size)
+            self.proj = nn.Conv2d(in_chans, embed_dim, kernel_size=patch_size, stride=patch_size, groups=patch_size*patch_size)
         elif proj_type == 'pool':
             self.proj = nn.ModuleList([nn.MaxPool2d(kernel_size=patch_size, stride=patch_size), nn.AvgPool2d(kernel_size=patch_size, stride=patch_size)])
         else:
@@ -145,7 +145,7 @@ class LawinHead(BaseDecodeHead):
         self.lawin_4 = LawinAttn(in_channels=512, reduction=reduction ,use_scale=use_scale, conv_cfg=self.conv_cfg, norm_cfg=self.norm_cfg, mode='embedded_gaussian', head=16, patch_size=8)
         self.lawin_2 = LawinAttn(in_channels=512, reduction=reduction ,use_scale=use_scale, conv_cfg=self.conv_cfg, norm_cfg=self.norm_cfg, mode='embedded_gaussian', head=4, patch_size=8)
 
-        self.image_pool = nn.Sequential(nn.AdaptiveAvgPool2d(1), ConvModule(embed_dim*3, 512, 1, conv_cfg=self.conv_cfg, norm_cfg=self.norm_cfg, act_cfg=self.act_cfg))
+        self.image_pool = nn.Sequential(nn.AdaptiveAvgPool2d(1), ConvModule(512, 512, 1, conv_cfg=self.conv_cfg, norm_cfg=self.norm_cfg, act_cfg=self.act_cfg))
         self.linear_c4 = MLP(input_dim=self.in_channels[-1], embed_dim=embed_dim)
         self.linear_c3 = MLP(input_dim=self.in_channels[2], embed_dim=embed_dim)
         self.linear_c2 = MLP(input_dim=self.in_channels[1], embed_dim=embed_dim)
