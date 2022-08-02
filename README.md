@@ -2,7 +2,7 @@
 
 [Paper](https://arxiv.org/abs/2201.01615)
 
-Lawin Transformer: Improving Semantic Segmentation Transformer with Multi-Scale Representations via Large Window Attention.<br>
+Lawin Transformer: Improving Semantic Segmentation Transformer with Multi-Scale Representations via Large Window Attention (*Under Review*).<br>
 
 
 ## Installation
