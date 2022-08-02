@@ -31,11 +31,11 @@ python tools/test.py local_configs/segformer/B2/lawin.b2.512x512.ade.160k.py /pa
 
 Download [weights](https://drive.google.com/drive/folders/1b7bwrInTW4VLEm27YawHOAMSMikga2Ia?usp=sharing) pretrained on ImageNet-1K, and put them in a folder ```pretrained/```.
 
-Example: train ```SegFormer-B2``` on ```ADE20K```:
+Example: train ```lawin-B2``` on ```ADE20K```:
 
 ```
 # Multi-gpu training
-./tools/dist_train.sh local_configs/segformer/B2/segformer.b2.512x512.ade.160k.py <GPU_NUM> --work-dir <WORK_DIRS_TO_SAVE_WEIGHTS&LOGS> 
+./tools/dist_train.sh local_configs/segformer/B2/lawin.b2.512x512.ade.160k.py <GPU_NUM> --work-dir <WORK_DIRS_TO_SAVE_WEIGHTS&LOGS> 
 ```
 
 ## Citation
