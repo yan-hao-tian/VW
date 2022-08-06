@@ -81,7 +81,11 @@ class LawinAttn(NonLocal2d):
         
         if mixing:
             self.norm = nn.LayerNorm(self.in_channels)
-            self.position_mixing = nn.ModuleList([nn.Linear(patch_size*patch_size, patch_size*patch_size) for _ in range(self.head)])
+            # self.position_mixing = nn.ModuleList([nn.Linear(patch_size*patch_size, patch_size*patch_size) for _ in range(self.head)])
+            self.position_mixing = nn.ParameterDict({
+                'weight': nn.Parameter(torch.zeros(head, patch_size ** 2, patch_size ** 2)),
+                'bias': nn.Parameter(torch.zeros(1, head, 1, patch_size ** 2))
+            })
             self.head_mixing = nn.Conv2d(head, head, 1, bias=True)
 
     def forward(self, query, context):
@@ -93,12 +97,13 @@ class LawinAttn(NonLocal2d):
             context = context.reshape(n, c, -1)
             context = self.norm(context.transpose(1, -1))
             context = rearrange(context, 'b n (h d) -> b h d n', h=self.head)
-            context_mlp = []
-            for hd in range(self.head):
-                context_crt = context[:, hd, :, :].unsqueeze(1)
-                context_mlp.append(self.position_mixing[hd](context_crt))
+            context_mlp = torch.einsum('bhdn, hnm -> bhdm', context, self.position_mixing['weight']) + self.position_mixing['bias']
+            # context_mlp = []
+            # for hd in range(self.head):
+            #     context_crt = context[:, hd, :, :].unsqueeze(1)
+            #     context_mlp.append(self.position_mixing[hd](context_crt))
 
-            context_mlp = torch.cat(context_mlp, dim=1)
+            # context_mlp = torch.cat(context_mlp, dim=1)
             context_mlp = self.head_mixing(context_mlp)
             context = context+context_mlp
             context = context.reshape(n, c, h, w)
