@@ -86,7 +86,7 @@ class LawinAttn(NonLocal2d):
                 'weight': nn.Parameter(torch.zeros(head, patch_size ** 2, patch_size ** 2)),
                 'bias': nn.Parameter(torch.zeros(1, head, 1, patch_size ** 2))
             })
-            self.head_mixing = nn.Conv2d(head, head, 1, bias=True)
+            self.head_mixing = nn.Conv2d(1, head, 1, bias=True)
 
     def forward(self, query, context):
         # x: [N, C, H, W]
