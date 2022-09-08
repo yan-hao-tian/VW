@@ -21,7 +21,7 @@ cd lawin && pip install -e . --user
 ```
 
 ## Evaluation
-Download trained model at [weights](https://drive.google.com/drive/folders/187xf3Ase-NGjnMmi2gq0Q222FxYlB-wm?usp=sharing).
+Download trained [models](https://drive.google.com/drive/folders/187xf3Ase-NGjnMmi2gq0Q222FxYlB-wm?usp=sharing).
 ```
 # Single-gpu testing
 python tools/test.py local_configs/segformer/B2/lawin.b2.512x512.ade.160k.py /path/to/checkpoint_file
