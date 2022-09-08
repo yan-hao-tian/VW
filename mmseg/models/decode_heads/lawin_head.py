@@ -70,6 +70,31 @@ class PatchEmbed(nn.Module):
             x = x.transpose(1, 2).view(-1, self.embed_dim, Wh, Ww)
         return x
 
+def xavier_uniform_(tensor: Tensor, gain: float = 1.) -> Tensor:
+    r"""Fills the input `Tensor` with values according to the method
+    described in `Understanding the difficulty of training deep feedforward
+    neural networks` - Glorot, X. & Bengio, Y. (2010), using a uniform
+    distribution. The resulting tensor will have values sampled from
+    :math:`\mathcal{U}(-a, a)` where
+
+    .. math::
+        a = \text{gain} \times \sqrt{\frac{6}{\text{fan\_in} + \text{fan\_out}}}
+
+    Also known as Glorot initialization.
+
+    Args:
+        tensor: an n-dimensional `torch.Tensor`
+        gain: an optional scaling factor
+
+    Examples:
+        >>> w = torch.empty(3, 5)
+        >>> nn.init.xavier_uniform_(w, gain=nn.init.calculate_gain('relu'))
+    """
+    fan_in, fan_out = nn.init._calculate_fan_in_and_fan_out(tensor[0, :, :])
+    std = gain * math.sqrt(2.0 / float(fan_in + fan_out))
+    a = math.sqrt(3.0) * std  # Calculate uniform bounds from standard deviation
+
+    return nn.init._no_grad_uniform_(tensor, -a, a)
 
 class LawinAttn(NonLocal2d):
     def __init__(self, *arg, head=1,
@@ -81,12 +106,11 @@ class LawinAttn(NonLocal2d):
         
         if mixing:
             self.norm = nn.LayerNorm(self.in_channels)
-            # self.position_mixing = nn.ModuleList([nn.Linear(patch_size*patch_size, patch_size*patch_size) for _ in range(self.head)])
             self.position_mixing = nn.ParameterDict({
                 'weight': nn.Parameter(torch.zeros(head, patch_size ** 2, patch_size ** 2)),
                 'bias': nn.Parameter(torch.zeros(1, head, 1, patch_size ** 2))
             })
-            self.head_mixing = nn.Conv2d(head, head, 1, bias=True)
+#             xavier_uniform_(self.position_mixing.weight, )
 
     def forward(self, query, context):
         # x: [N, C, H, W]
@@ -95,17 +119,11 @@ class LawinAttn(NonLocal2d):
         
         if self.mixing:
             context = context.reshape(n, c, -1)
-            context = self.norm(context.transpose(1, -1))
-            context = rearrange(context, 'b n (h d) -> b h d n', h=self.head)
+            
+            context = rearrange(self.norm(context.transpose(1, -1)), 'b n (h d) -> b h d n', h=self.head)
             context_mlp = torch.einsum('bhdn, hnm -> bhdm', context, self.position_mixing['weight']) + self.position_mixing['bias']
-            # context_mlp = []
-            # for hd in range(self.head):
-            #     context_crt = context[:, hd, :, :].unsqueeze(1)
-            #     context_mlp.append(self.position_mixing[hd](context_crt))
-
-            # context_mlp = torch.cat(context_mlp, dim=1)
-            context_mlp = self.head_mixing(context_mlp)
             context = context+context_mlp
+            
             context = context.reshape(n, c, h, w)
 
         # g_x: [N, HxW, C]
