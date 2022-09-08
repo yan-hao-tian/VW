@@ -25,7 +25,7 @@ model = dict(
         align_corners=False,
         concat_fuse=True,
         depth=1,
-        decoder_params=dict(embed_dim=512, in_dim=512, reduction=2, proj_type='pool', use_scale=True, mixing=True),
+        decoder_params=dict(embed_dim=512, in_dim=512, reduction=2, proj_type='conv', use_scale=True, mixing=True),
         loss_decode=dict(type='CrossEntropyLoss', use_sigmoid=False, loss_weight=1.0)),
     # model training and testing settings
     train_cfg=dict(),
