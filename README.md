@@ -4,7 +4,7 @@
 
 Lawin Transformer: Improving Semantic Segmentation Transformer with Multi-Scale Representations via Large Window Attention (*Under Review*).<br>
 
-🔥🔥🔥Lawin Transformer is accepted by T4V@CVPR2023.
+🔥🔥🔥Lawin Transformer is accepted by [T4V@CVPR2023](https://sites.google.com/view/t4v-cvpr23/home).
 
 
 ## Installation
