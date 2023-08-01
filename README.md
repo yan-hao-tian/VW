@@ -74,9 +74,9 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 <td align="center">Swin-T</td>
 <td align="center">512x512</td>
 <td align="center">160k</td>
-<td align="center"></td>
-<td align="center"></td>
-<td align="center"><a href="https://dl.fbaipublicfiles.com/maskformer/semantic-ade20k/maskformer_swin_tiny_bs16_160k/model_final_8657a5.pkl">model</a></td>
+<td align="center">47.4</td>
+<td align="center">49.0</td>
+<td align="center"><a href="https://drive.google.com/file/d/1kzu8K8phAEPo6NHoLubSePlKl6N86Mde/view?usp=sharing">model</a></td>
 </tr>
 <!-- ROW: maskformer_swin_small_bs16_160k -->
  <tr><td align="left"><a href="configs/ade20k-150/swin/lawin/lawin_maskformer_swin_small_bs16_160k.yaml">Lawin-MaskFormer</a></td>
