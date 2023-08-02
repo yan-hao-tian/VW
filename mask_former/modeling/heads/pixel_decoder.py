@@ -1,4 +1,3 @@
-# Copyright (c) Facebook, Inc. and its affiliates.
 import logging
 from typing import Callable, Dict, List, Optional, Tuple, Union
 
@@ -194,14 +193,12 @@ class TransformerEncoderOnly(nn.Module):
 
 
 @SEM_SEG_HEADS_REGISTRY.register()
-class LawinTransformerPixelDecoder(BasePixelDecoder):
+class LawinTransformerPixelDecoder(nn.Module):
     @configurable
     def __init__(
         self,
         input_shape: Dict[str, ShapeSpec],
         *,
-        conv_dim: int,
-        mask_dim: int,
         norm: Optional[Union[str, Callable]] = None,
         short_cut: bool,
         nheads: int,
@@ -213,7 +210,7 @@ class LawinTransformerPixelDecoder(BasePixelDecoder):
             norm (str or callable): normalization for all conv layers
             short_cut: bool. attention in Lawin with or withour shortcut
         """
-        super().__init__(input_shape, conv_dim=conv_dim, mask_dim=mask_dim, norm=norm)
+        super().__init__()
 
         self.short_cut = short_cut
         input_shape = sorted(input_shape.items(), key=lambda x: x[1].stride)
@@ -244,9 +241,12 @@ class LawinTransformerPixelDecoder(BasePixelDecoder):
     @classmethod
     def from_config(cls, cfg, input_shape: Dict[str, ShapeSpec]):
         ret = {}
-        ret = super().from_config(cfg, input_shape)
+        ret["input_shape"] = {
+            k: v for k, v in input_shape.items() if k in cfg.MODEL.SEM_SEG_HEAD.IN_FEATURES
+        }
         ret['short_cut'] = cfg.MODEL.SEM_SEG_HEAD.SHORT_CUT
         ret['nheads'] = cfg.MODEL.SEM_SEG_HEAD.NHEADS
+        ret["norm"] = cfg.MODEL.SEM_SEG_HEAD.NORM
         return ret
 
     def forward_features(self, features):
@@ -420,3 +420,4 @@ class TransformerEncoderPixelDecoder(BasePixelDecoder):
         logger = logging.getLogger(__name__)
         logger.warning("Calling forward() may cause unpredicted behavior of PixelDecoder module.")
         return self.forward_features(features)
+
