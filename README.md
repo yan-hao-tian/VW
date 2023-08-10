@@ -1,6 +1,6 @@
 # Lawin Transformer: Improving New-Era Vision Backbones with Multi-Scale Representations for Semantic Segmentation
 
-[[`Paper`](https://drive.google.com/file/d/1eQd_bj1DTNTxpMVvfIzkt0vdZujrf9IK/view)] [[`Poster`](https://drive.google.com/file/d/1ifjjedbX8nbF0iBDI7g3uL_j8Hkf84sN/view)] [[`Supplementary`](https://drive.google.com/file/d/1QPFqAS-3LETbRULfPk-vfoO50g_MfPAN/view)] [[`Code`](https://github.com/yan-hao-tian/lawin/blob/3d63450910ab0a303e60abf3b86bad1a3e4b29b8/mask_former/modeling/heads/pixel_decoder.py#L197)]
+[[`Paper`](https://drive.google.com/file/d/1eQd_bj1DTNTxpMVvfIzkt0vdZujrf9IK/view)] [[`Poster`](https://drive.google.com/file/d/1ifjjedbX8nbF0iBDI7g3uL_j8Hkf84sN/view)] [[`Supplementary`](https://drive.google.com/file/d/1QPFqAS-3LETbRULfPk-vfoO50g_MfPAN/view)] [[`Code`](https://github.com/yan-hao-tian/lawin/blob/70903a10403d4d8b87b0a2fe39a7cf045cf5a476/mask_former/modeling/heads/pixel_decoder.py#L196)]
 
 🔥🔥🔥 Accepted by [Transformers for Vision @CVPR2023](https://sites.google.com/view/t4v-cvpr23/home).
 
