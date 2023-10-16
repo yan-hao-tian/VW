@@ -194,7 +194,7 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 <td align="center">160k</td>
 <td align="center">56.5</td>
 <td align="center">57.8</td>
-<td align="center"><a href="https://drive.google.com/file/d/14paNql4Mu1ukRB-k4ewyR8dV00R0MIFo/view?usp=sharing">model</a></td>
+<td align="center"><a href="https://drive.google.com/file/d/1aMxSCPXWxfidx7wU4LBr7WkF59N4TyY7/view?usp=sharing">model</a></td>
 </tr>
 </tbody></table>
 
