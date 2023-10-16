@@ -80,6 +80,7 @@ python ./train_net.py \
 --resume --num-gpus 16 --dist-url auto \
 --config-file configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_large_IN21k_384_bs16_160k_res640.yaml \
 OUTPUT_DIR path/to/large TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
+```
 ## Evaluation
 ### MaskFormer
 ```
