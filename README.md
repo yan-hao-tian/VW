@@ -185,7 +185,7 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 <td align="center">160k</td>
 <td align="center">54.6</td>
 <td align="center">56.0</td>
-<td align="center"><a href="https://drive.google.com/file/d/1Llvp_-KsVdV9pK1yBG29D3xhryrYOeVf/view?usp=sharing">model</a></td>
+<td align="center"><a href="https://drive.google.com/file/d/1Xa5gW981iLZ3feFBVqS-lvFa9e8Z8ZMP/view?usp=sharing">model</a></td>
 </tr>
 <!-- ROW: mask2former_swin_large_IN21k_384_bs16_160k_res640 -->
  <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_large_IN21k_384_bs16_160k_res640.yaml">Lawin-Mask2Former</a></td>
