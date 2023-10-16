@@ -16,17 +16,13 @@ See [Preparing Datasets for MaskFormer](datasets/README.md).
 
 More Utilization: See [Getting Started with MaskFormer](GETTING_STARTED.md). \
 \
+### MaskFormer
 Swin-Tiny
-MaskFormer
 ```
 python ./train_net.py \
 --resume --num-gpus 2 --dist-url auto \
 --config-file configs/ade20k-150/swin/lawin/lawin_maskformer_swin_tiny_bs16_160k.yaml \
 OUTPUT_DIR path/to/tiny TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
-```
-Mask2Former
-```
-
 ```
 Swin-Small
 ```
