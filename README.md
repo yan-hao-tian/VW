@@ -88,6 +88,7 @@ python ./train_net.py \
 --config-file path/to/config \
 MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
 ```
+
 ### Mask2Former
 ```
 cd Mask2Former
