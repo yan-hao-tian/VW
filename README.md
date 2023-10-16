@@ -46,6 +46,40 @@ python ./train_net.py \
 --config-file configs/ade20k-150/swin/lawin/lawin_maskformer_swin_large_IN21k_384_bs16_160k_res640.yaml \
 OUTPUT_DIR path/to/large TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
 ```
+### Mask2Former
+Swin-Tiny
+```
+cd Mask2Former
+python ./train_net.py \
+--resume --num-gpus 2 --dist-url auto \
+--config-file configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_tiny_bs16_160k.yaml \
+OUTPUT_DIR path/to/tiny TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
+```
+Swin-Small
+```
+cd Mask2Former
+python ./train_net.py \
+--resume --num-gpus 4 --dist-url auto \
+--config-file configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_small_bs16_160k.yaml \
+OUTPUT_DIR path/to/small TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
+```
+
+Swin-Base
+```
+cd Mask2Former
+python ./train_net.py \
+--resume --num-gpus 8 --dist-url auto \
+--config-file configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_base_IN21k_384_bs16_160k_res640.yaml \
+OUTPUT_DIR path/to/base TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
+```
+
+Swin-Large
+```
+cd Mask2Former
+python ./train_net.py \
+--resume --num-gpus 16 --dist-url auto \
+--config-file configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_large_IN21k_384_bs16_160k_res640.yaml \
+OUTPUT_DIR path/to/large TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
 ## Evaluation
 ### MaskFormer
 ```
