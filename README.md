@@ -147,41 +147,6 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 <td align="center">56.5</td>
 <td align="center"><a href="https://drive.google.com/file/d/14paNql4Mu1ukRB-k4ewyR8dV00R0MIFo/view?usp=sharing">model</a></td>
 </tr>
- <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_tiny_bs16_160k.yaml">Lawin-Mask2Former</a></td>
-<td align="center">Swin-T</td>
-<td align="center">512x512</td>
-<td align="center">160k</td>
-<td align="center">48.2</td>
-<td align="center">50.5</td>
-<td align="center"><a href="https://drive.google.com/file/d/1kzu8K8phAEPo6NHoLubSePlKl6N86Mde/view?usp=sharing">model</a></td>
-</tr>
-<!-- ROW: maskformer_swin_small_bs16_160k -->
- <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_small_bs16_160k.yaml">Lawin-Mask2Former</a></td>
-<td align="center">Swin-S</td>
-<td align="center">512x512</td>
-<td align="center">160k</td>
-<td align="center">52.1</td>
-<td align="center">53.7</td>
-<td align="center"><a href="https://drive.google.com/file/d/1mPmwVUlJckeldTwpsKIiRaE5wQOpKaou/view?usp=sharing">model</a></td>
-</tr>
-<!-- ROW: maskformer_swin_base_IN21k_384_bs16_160k_res640 -->
- <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_base_IN21k_384_bs16_160k_res640.yaml">Lawin-Mask2Former</a></td>
-<td align="center">Swin-B</td>
-<td align="center">640x640</td>
-<td align="center">160k</td>
-<td align="center">54.6</td>
-<td align="center">56.0</td>
-<td align="center"><a href="https://drive.google.com/file/d/1Llvp_-KsVdV9pK1yBG29D3xhryrYOeVf/view?usp=sharing">model</a></td>
-</tr>
-<!-- ROW: maskformer_swin_large_IN21k_384_bs16_160k_res640 -->
- <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_large_IN21k_384_bs16_160k_res640.yaml">Lawin-Mask2Former</a></td>
-<td align="center">Swin-L</td>
-<td align="center">640x640</td>
-<td align="center">160k</td>
-<td align="center">56.5</td>
-<td align="center">57.8</td>
-<td align="center"><a href="https://drive.google.com/file/d/14paNql4Mu1ukRB-k4ewyR8dV00R0MIFo/view?usp=sharing">model</a></td>
-</tr>
 </tbody></table>
 
 <table><tbody>
