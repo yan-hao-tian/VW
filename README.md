@@ -15,7 +15,6 @@ See [Preparing Datasets for MaskFormer](datasets/README.md).
 ## Train
 
 More Utilization: See [Getting Started with MaskFormer](GETTING_STARTED.md). \
-\
 ### MaskFormer
 Swin-Tiny
 ```
