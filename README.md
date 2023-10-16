@@ -184,6 +184,55 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 </tr>
 </tbody></table>
 
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Name</th>
+<th valign="bottom">Backbone</th>
+<th valign="bottom">crop<br/>size</th>
+<th valign="bottom">lr<br/>sched</th>
+<th valign="bottom">mIoU</th>
+<th valign="bottom">mIoU<br/>(ms+flip)</th>
+<th valign="bottom">download</th>
+<!-- TABLE BODY -->
+<!-- ROW: mask2former_swin_tiny_bs16_160k -->
+ <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_tiny_bs16_160k.yaml">Lawin-Mask2Former</a></td>
+<td align="center">Swin-T</td>
+<td align="center">512x512</td>
+<td align="center">160k</td>
+<td align="center">48.2</td>
+<td align="center">50.5</td>
+<td align="center"><a href="https://drive.google.com/file/d/1kzu8K8phAEPo6NHoLubSePlKl6N86Mde/view?usp=sharing">model</a></td>
+</tr>
+<!-- ROW: mask2former_swin_small_bs16_160k -->
+ <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_small_bs16_160k.yaml">Lawin-Mask2Former</a></td>
+<td align="center">Swin-S</td>
+<td align="center">512x512</td>
+<td align="center">160k</td>
+<td align="center">52.1</td>
+<td align="center">53.7</td>
+<td align="center"><a href="https://drive.google.com/file/d/1mPmwVUlJckeldTwpsKIiRaE5wQOpKaou/view?usp=sharing">model</a></td>
+</tr>
+<!-- ROW: mask2former_swin_base_IN21k_384_bs16_160k_res640 -->
+ <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_base_IN21k_384_bs16_160k_res640.yaml">Lawin-Mask2Former</a></td>
+<td align="center">Swin-B</td>
+<td align="center">640x640</td>
+<td align="center">160k</td>
+<td align="center">54.6</td>
+<td align="center">56.0</td>
+<td align="center"><a href="https://drive.google.com/file/d/1Llvp_-KsVdV9pK1yBG29D3xhryrYOeVf/view?usp=sharing">model</a></td>
+</tr>
+<!-- ROW: mask2former_swin_large_IN21k_384_bs16_160k_res640 -->
+ <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/lawin/lawin_maskformer2_swin_large_IN21k_384_bs16_160k_res640.yaml">Lawin-Mask2Former</a></td>
+<td align="center">Swin-L</td>
+<td align="center">640x640</td>
+<td align="center">160k</td>
+<td align="center">56.5</td>
+<td align="center">57.8</td>
+<td align="center"><a href="https://drive.google.com/file/d/14paNql4Mu1ukRB-k4ewyR8dV00R0MIFo/view?usp=sharing">model</a></td>
+</tr>
+</tbody></table>
+
 ## <a name="CitingMaskFormer"></a>Citing Lawin Transformer
 
 <!-- If you use Lawin Transformer in your research or wish to refer to the baseline results published in the [Model Zoo]((#ModelZoo)), please use the following BibTeX entry. -->
