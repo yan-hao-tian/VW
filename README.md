@@ -17,14 +17,17 @@ See [Preparing Datasets for MaskFormer](datasets/README.md).
 More Utilization: See [Getting Started with MaskFormer](GETTING_STARTED.md). \
 \
 Swin-Tiny
-
+MaskFormer
 ```
 python ./train_net.py \
 --resume --num-gpus 2 --dist-url auto \
 --config-file configs/ade20k-150/swin/lawin/lawin_maskformer_swin_tiny_bs16_160k.yaml \
 OUTPUT_DIR path/to/tiny TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
 ```
+Mask2Former
+```
 
+```
 Swin-Small
 ```
 python ./train_net.py \
@@ -49,13 +52,21 @@ python ./train_net.py \
 OUTPUT_DIR path/to/large TEST.EVAL_PERIOD 10000 MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
 ```
 ## Evaluation
+MaskFormer\
 ```
 python ./train_net.py \
 --eval-only --num-gpus NGPUS --dist-url auto \
 --config-file path/to/config \
 MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
 ```
-
+Mask2Former\
+```
+cd Mask2Former
+python ./train_net.py \
+--eval-only --num-gpus NGPUS --dist-url auto \
+--config-file path/to/config \
+MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISIBILITY 64
+```
 
 ## <a name="ModelZoo"></a>Model
 <table><tbody>
