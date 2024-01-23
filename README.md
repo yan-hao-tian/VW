@@ -4,7 +4,7 @@
 
 🔥🔥🔥 Accepted by [Transformers for Vision @CVPR2023](https://sites.google.com/view/t4v-cvpr23/home).
 
-🔥🔥🔥 A polished version [Multi-Scale Representations by Varying Window Attention for Semantic Segmentation](https://openreview.net/forum?id=lAhWGOkpSR) accepted by ICLR2024
+🔥🔥🔥 A formal version [Multi-Scale Representations by Varying Window Attention for Semantic Segmentation](https://openreview.net/forum?id=lAhWGOkpSR) accepted by ICLR2024
 
 ## Installation
 
