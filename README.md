@@ -198,15 +198,16 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 </tr>
 </tbody></table>
 
-## <a name="CitingMaskFormer"></a>Citing Lawin Transformer
+## <a name="CitingMaskFormer"></a>Citing VW
 
-<!-- If you use Lawin Transformer in your research or wish to refer to the baseline results published in the [Model Zoo]((#ModelZoo)), please use the following BibTeX entry. -->
+<!-- If you use VWA or VWFormer in your research or wish to refer to the baseline results published in the [Model Zoo]((#ModelZoo)), please use the following BibTeX entry. -->
 
 ```BibTeX
-@article{yan2022lawin,
-  title={Lawin transformer: Improving semantic segmentation transformer with multi-scale representations via large window attention},
-  author={Yan, Haotian and Zhang, Chuang and Wu, Ming},
-  journal={arXiv preprint arXiv:2201.01615},
-  year={2022}
+@inproceedings{yan2023multi,
+  title={Multi-Scale Representations by Varing Window Attention for Semantic Segmentation},
+  author={Yan, Haotian and Wu, Ming and Zhang, Chuang},
+  booktitle={The Twelfth International Conference on Learning Representations},
+  year={2023}
+}r={2022}
 }
 ```
