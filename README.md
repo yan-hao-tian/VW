@@ -208,6 +208,5 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
   author={Yan, Haotian and Wu, Ming and Zhang, Chuang},
   booktitle={The Twelfth International Conference on Learning Representations},
   year={2023}
-}r={2022}
 }
 ```
