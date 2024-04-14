@@ -1,4 +1,4 @@
-# Multi-Scale Representations by Varying Window Attention for Semantic Segmentation
+# [ICLR2024] Multi-Scale Representations by Varying Window Attention for Semantic Segmentation
 
 [[`Code`](https://github.com/yan-hao-tian/lawin/blob/70903a10403d4d8b87b0a2fe39a7cf045cf5a476/mask_former/modeling/heads/pixel_decoder.py#L196)]
 
