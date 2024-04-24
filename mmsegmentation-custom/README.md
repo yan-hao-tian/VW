@@ -129,7 +129,7 @@ tools/dist_test.sh path/to/config.py path/to/weights.pth NUM_GPUS --eval mIoU
 <td align="center">512x1024</td>
 <td align="center">160k</td>
 <td align="center">81.3</td>
-<td align="center">48.3</td>
+<td align="center">81.9</td>
 <td align="center"><a href="https://huggingface.co/yan-hao-tian/vw_convnext-ti_cityscapes/tree/main">model</a></td>
 </tr>
 <!-- ROW: maskformer_swin_small_bs16_160k -->
@@ -138,7 +138,7 @@ tools/dist_test.sh path/to/config.py path/to/weights.pth NUM_GPUS --eval mIoU
 <td align="center">512x1024</td>
 <td align="center">160k</td>
 <td align="center">82.2</td>
-<td align="center">49.9</td>
+<td align="center">82.8</td>
 <td align="center"><a href="https://huggingface.co/yan-hao-tian/vw_convnext-s_cityscapes/tree/main">model</a></td>
 </tr>
 <tr><td align="left"><a href="configs/convnext/vw_convnext_base_fp16_512x1024_160k_cityscapes.py">VW</a></td>
