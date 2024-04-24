@@ -7,7 +7,7 @@
 [`HuggingFace`](https://huggingface.co/yan-hao-tian)🤗
 
 ## Using VW
-[VW-Swin/ConvNeXt]()
+[VW-Swin/ConvNeXt](mmsegmentation-custom)
 
 [VW-MaskFormer](MaskFormer)
 
