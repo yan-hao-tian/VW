@@ -162,7 +162,7 @@ tools/dist_test.sh path/to/config.py path/to/weights.pth NUM_GPUS --eval mIoU
 <td align="center">ConvNeXt-XL</td>
 <td align="center">512x1024</td>
 <td align="center">160k</td>
-<td align="center">84.6</td>
+<td align="center">83.6</td>
 <td align="center">84.3</td>
 <td align="center"><a href="https://huggingface.co/yan-hao-tian/vw_convnext-xl_cityscapes/tree/main">model</a></td>
 </tr>
