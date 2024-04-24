@@ -4,7 +4,7 @@
 
 🔥🔥🔥 [ICLR2024 Poster](https://openreview.net/forum?id=lAhWGOkpSR) 🔥🔥🔥
 
-[`HuggingFace`🤗](https://huggingface.co/yan-hao-tian)
+[`HuggingFace`](https://huggingface.co/yan-hao-tian)🤗
 
 ## Using VW
 [VW-Swin/ConvNeXt]()
