@@ -6,7 +6,7 @@
 
 [`HuggingFace`](https://huggingface.co/yan-hao-tian)🤗
 
-## Using VW
+## Running VW
 [VW-Swin/ConvNeXt](mmsegmentation-custom)
 
 [VW-MaskFormer](MaskFormer)
