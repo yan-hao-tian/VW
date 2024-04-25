@@ -193,7 +193,7 @@ class TransformerEncoderOnly(nn.Module):
 
 
 @SEM_SEG_HEADS_REGISTRY.register()
-class LawinTransformerPixelDecoder(nn.Module):
+class VWTransformerPixelDecoder(nn.Module):
     @configurable
     def __init__(
         self,
