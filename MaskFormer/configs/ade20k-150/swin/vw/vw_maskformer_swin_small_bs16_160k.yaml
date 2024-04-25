@@ -3,7 +3,7 @@ MODEL:
   BACKBONE:
     NAME: "D2SwinTransformer"
   SEM_SEG_HEAD:
-    PIXEL_DECODER_NAME: "LawinTransformerPixelDecoder"
+    PIXEL_DECODER_NAME: "VWTransformerPixelDecoder"
     NAME: "MaskFormerHead"
     IN_FEATURES: ["res2", "res3", "res4", "res5"]
     IGNORE_VALUE: 255
