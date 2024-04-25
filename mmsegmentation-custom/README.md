@@ -129,7 +129,7 @@ tools/dist_test.sh path/to/config.py path/to/weights.pth NUM_GPUS --eval mIoU
 <td align="center">512x1024</td>
 <td align="center">160k</td>
 <td align="center">81.3</td>
-<td align="center">81.9</td>
+<td align="center">82.1</td>
 <td align="center"><a href="https://huggingface.co/yan-hao-tian/vw_convnext-ti_cityscapes/tree/main">model</a></td>
 </tr>
 <!-- ROW: maskformer_swin_small_bs16_160k -->
