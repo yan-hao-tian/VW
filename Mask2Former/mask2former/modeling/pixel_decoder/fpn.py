@@ -318,7 +318,7 @@ class TransformerEncoderPixelDecoder(BasePixelDecoder):
         return self.forward_features(features)
 
 @SEM_SEG_HEADS_REGISTRY.register()
-class MSDeformAttnPixelDecoder(nn.Module):
+class VWDeformAttnPixelDecoder(nn.Module):
     @configurable
     def __init__(
         self,
@@ -438,12 +438,9 @@ class MSDeformAttnPixelDecoder(nn.Module):
             setattr(self, f'ds_{d}', nn.ModuleList([Conv2d(512, 512//(k**2), kernel_size=k, padding=0,norm=get_norm('SyncBN', 512//(k**2)), activation=F.relu,) 
                                     for k in [2, 4, 8]]))
         for d in range(depth):
-            setattr(self, f'cat_{d}', Conv2d(2560, 512, kernel_size=1, bias=use_bias, norm=output_norm, activation=F.relu,))
+            setattr(self, f'cat_{d}', Conv2d(2048, 512, kernel_size=1, bias=use_bias, norm=output_norm, activation=F.relu,))
         for d in range(depth):
             setattr(self, f'short_path_{d}', Conv2d(512, 512, kernel_size=1, bias=use_bias, norm=output_norm, activation=F.relu,))
-        for d in range(depth):
-            setattr(self, f'image_pool_{d}', nn.Sequential(nn.AdaptiveAvgPool2d(1), 
-                            Conv2d(512, 512, kernel_size=1, bias=use_bias, norm=output_norm, activation=F.relu,)))
         
         # for idx, in_channels in enumerate(self.feature_channels[:self.num_fpn_levels]):
         #     lateral_norm = get_norm(norm, conv_dim)
@@ -554,10 +551,6 @@ class MSDeformAttnPixelDecoder(nn.Module):
         for d in range(self.depth):
             output = []
             output.append(getattr(self, f'short_path_{d}')(_c))
-            output.append(F.interpolate(
-                    getattr(self, f'image_pool_{d}')(_c),
-                    size=_c.size()[2:],
-                    mode='nearest'))
             query = rearrange(_c, 'b c (nh ph) (nw pw) -> (b nh nw) (ph pw) c', nh=nh, nw=nw)
             for j, r in enumerate([2, 4, 8]):
                 rh = rw = r
