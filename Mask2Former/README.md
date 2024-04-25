@@ -82,7 +82,7 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 <td align="center"><a href="https://huggingface.co/yan-hao-tian/vw_mask2former-s_ade20k/tree/main">model</a></td>
 </tr>
 <!-- ROW: mask2former_swin_base_IN21k_384_bs16_160k_res640 -->
- <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/vw/vw_maskformer2_swin_base_IN21k_384_bs16_160k_res640.yaml">VW-Mask2Former</a></td>
+ <tr><td align="left"><a href="configs/ade20k/semantic-segmentation/swin/vw/vw_maskformer2_swin_base_IN21k_384_bs16_160k_res640.yaml">VW-Mask2Former</a></td>
 <td align="center">Swin-B</td>
 <td align="center">640x640</td>
 <td align="center">160k</td>
@@ -91,7 +91,7 @@ MODEL.WEIGHTS path/to/weight TEST.AUG.ENABLED True MODEL.MASK_FORMER.SIZE_DIVISI
 <td align="center"><a href="https://huggingface.co/yan-hao-tian/vw_mask2former-b_ade20k/tree/main">model</a></td>
 </tr>
 <!-- ROW: mask2former_swin_large_IN21k_384_bs16_160k_res640 -->
- <tr><td align="left"><a href="Mask2Former/configs/ade20k/semantic-segmentation/swin/vw/vw_maskformer2_swin_large_IN21k_384_bs16_160k_res640.yaml">VW-Mask2Former</a></td>
+ <tr><td align="left"><a href="configs/ade20k/semantic-segmentation/swin/vw/vw_maskformer2_swin_large_IN21k_384_bs16_160k_res640.yaml">VW-Mask2Former</a></td>
 <td align="center">Swin-L</td>
 <td align="center">640x640</td>
 <td align="center">160k</td>
