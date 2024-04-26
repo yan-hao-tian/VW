@@ -4,6 +4,8 @@
 
 🔥🔥🔥 [ICLR2024 Poster](https://openreview.net/forum?id=lAhWGOkpSR) 🔥🔥🔥
 
+[`arxiv`](https://arxiv.org/abs/2404.16573)
+
 [`HuggingFace`](https://huggingface.co/yan-hao-tian)🤗
 
 ## Running VW
