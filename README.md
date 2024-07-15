@@ -29,4 +29,4 @@
 }
 ```
 ## Last but not Least
-I am looking for some intern opportunity on Vision or Multi-Modal, best based in Beijing. If you are looking for an intern, please contact me via yanhaotian@bupt.edu.cn. BTW I will obtain Ph.D degree in September 2025.
+I am looking for some intern opportunity on Vision or Multi-Modal, best based in Beijing. If you need an intern, please contact me via yanhaotian@bupt.edu.cn or leave your link🙏🙏🙏. BTW I will obtain Ph.D degree in September 2025.
