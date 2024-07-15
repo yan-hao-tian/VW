@@ -9,7 +9,7 @@
 [`HuggingFace`](https://huggingface.co/yan-hao-tian)🤗
 
 ## 🙏🙏🙏
-I am looking for some intern opportunity on Vision or Multi-Modal, best based in Beijing (other cities will be ok but I shall persuade my tutor and GF). If you need an intern, please contact me via yanhaotian@bupt.edu.cn or leave your link by opening an issue. BTW I will obtain Ph.D degree in the second half of 2025 (next September).
+I am looking for some intern opportunity on Vision or Multi-Modal, best based in Beijing (other cities might be okay). If you need an intern, please contact me via yanhaotian@bupt.edu.cn or leave your link by opening an issue. BTW I will obtain Ph.D degree in the second half of 2025 (next September).
 
 
 ## Running VW
