@@ -8,9 +8,6 @@
 
 [`HuggingFace`](https://huggingface.co/yan-hao-tian)🤗
 
-## 🙏🙏🙏
-I am looking for some internship opportunity, either in industry or academia, best based in Beijing (other cities might be okay). If you need an intern, please contact me via yanhaotian@bupt.edu.cn or leave your link by opening an issue in this repo for me to contact you. BTW I will obtain Ph.D degree in the second half of 2025 (next September).
-
 
 ## Running VW
 [VW-Swin/ConvNeXt](mmsegmentation-custom)
