@@ -150,9 +150,9 @@ class VWHead(BaseDecodeHead):
         self.kernel = kernel = [[2, 2], [4, 4], [8, 8]]
         self.pre_scaling = True
         self.short_cut = short_cut
-        self.linear_c4 = MLP(self.in_channels[-1], 512)
-        self.linear_c3 = MLP(self.in_channels[2], 512)
-        self.linear_c2 = MLP(self.in_channels[1], 512)
+        self.linear_c4 = MLP(self.in_channels[-1], embed_dim)
+        self.linear_c3 = MLP(self.in_channels[2], embed_dim)
+        self.linear_c2 = MLP(self.in_channels[1], embed_dim)
        
         self.linear_fuse = ConvModule(
                                 in_channels=embed_dim*3,
